@@ -10,7 +10,9 @@ import os
 def download():
     datadir=os.getcwd()+"/data/";
     serverurl="https://www.cs.cmu.edu/~spok/grimmtmp/"
-    for i in range(1,220):
+    if not os.path.exists(datadir):
+        os.mkdir(datadir)       
+    for i in range(1,5):
         if i<10:
             filename="00"+str(i)+".txt"
         elif i>=10 and i<100:
